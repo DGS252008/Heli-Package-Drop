@@ -56,7 +56,8 @@ function draw() {
 
 function keyPressed() {
  if (keyCode === DOWN_ARROW) {
-	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:1, isStatic:false});
+	Matter.Body.setStatic(packageBody,false);
+	packageBody.restitution = 0.5
   }
 }
 
